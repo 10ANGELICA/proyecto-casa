@@ -1,0 +1,72 @@
+.presentacion {
+  background: linear-gradient(135deg, #f8c6d0 0%, #f4a7b9 50%, #5c5354 100%);
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 700px;
+  margin: 2rem auto;
+  color: #0e0104; // texto oscuro pero suave
+
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 10px 20px rgba(240, 114, 137, 0.3);
+
+  .logo {
+    display: block;
+    max-width: 120px;
+    margin: 0 auto 1.5rem auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(192, 110, 125, 0.4);
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: #7f3241;
+      text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.6);
+    }
+  }
+
+  article {
+    p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+
+      strong {
+        font-weight: 700;
+        color: #756468;
+      }
+    }
+  }
+
+  nav {
+    margin-top: 2rem;
+    text-align: center;
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        a {
+          background: #f4798e;
+          color: white;
+          padding: 0.7rem 1.5rem;
+          border-radius: 25px;
+          text-decoration: none;
+          font-weight: 600;
+          transition: background-color 0.3s ease;
+
+          &:hover {
+            background: #d94a61;
+            box-shadow: 0 4px 12px rgba(217, 74, 97, 0.6);
+          }
+        }
+      }
+    }
+  }
+}

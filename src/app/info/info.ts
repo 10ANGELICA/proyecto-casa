@@ -1,0 +1,14 @@
+import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
+
+@Component({
+  selector: 'app-info',
+  imports: [
+    RouterModule
+  ],
+  templateUrl: './info.html',
+  styleUrl: './info.scss'
+})
+export class Info {
+
+}

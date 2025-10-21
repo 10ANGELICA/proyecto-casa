@@ -1,0 +1,14 @@
+.carrusel {
+    text-align: center;
+    padding: 20px;
+
+    img {
+        width: 70%;
+        max-width: 80%;
+        height: auto;
+        border-radius: 10px;
+        transition: opacity 1s ease-in-out;
+        display: block;
+        margin: 0 auto;
+    }
+}

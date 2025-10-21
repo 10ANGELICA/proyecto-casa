@@ -1,0 +1,33 @@
+footer {
+  background: linear-gradient(180deg, #5d3a1a 0%, #a67c4f 50%, #4b2e0b 100%);
+  color: #e2aaaa;
+  padding: 2rem 1rem;
+  text-align: center;
+  font-size: 1.125rem; // letras medianas (18px aprox)
+  font-family: 'Poppins', sans-serif;
+
+  a {
+    color: #a78c6f; // marrón claro
+    text-decoration: none;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+
+    &:hover {
+      text-decoration: underline;
+      color: #8d8c76; // marrón más oscuro
+    }
+  }
+
+  .footer-links {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .footer-copy {
+    font-size: 1rem; // un poco más pequeño pero legible
+    opacity: 0.75;
+  }
+}
