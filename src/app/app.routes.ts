@@ -1,10 +1,9 @@
 import { Routes } from '@angular/router';
-import { Inicio } from './inicio/inicio';
-import { Servicios } from './servicios/servicios';
 
 export const routes: Routes = [
-    {path: '', component:Inicio},
-    {path: 'nuestros servicios', component:Servicios},
-    { path: '**', redirectTo: '', pathMatch: 'full' }    
-    
+    {path: '', loadComponent: () => import('./inicio/inicio').then(m => m.Inicio)},
+    {path: 'servicios', loadComponent: () => import('./servicios/servicios').then(m => m.Servicios)},
+    {path: 'contacto', loadComponent: () => import('./contacto/contacto').then(m => m.Contacto)},
+    {path: '**', redirectTo: '', pathMatch: 'full' },
+
 ];

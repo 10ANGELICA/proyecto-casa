@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { Info } from "../info/info";
-import { RouterLink } from '@angular/router';
+import { Carrusel } from '../carrusel/carrusel';
 
 @Component({
   selector: 'app-inicio',
-  imports: [],
+  imports: [Carrusel,Info],
   templateUrl: './inicio.html',
   styleUrl: './inicio.scss'
 })
 export class Inicio {
 
+  
 }

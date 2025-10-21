@@ -1,12 +1,20 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+
+interface Video{
+  nombre:string;
+  ruta:string;
+}
 
 @Component({
   selector: 'app-servicios',
-  imports: [RouterLink],
+  imports: [],
   templateUrl: './servicios.html',
   styleUrl: './servicios.scss'
 })
 export class Servicios {
+
+    videos: Video[]=[
+    {nombre:"Video 1", ruta:"1.mp4"},
+  ]
 
 }

@@ -1,1 +1,10 @@
 <p>servicios works!</p>
+@for(item of videos; track item) {
+    <video width="320" height="240" controls autoplay>
+        <p>{{item.nombre}}</p>
+        <source src="{{item.ruta}}" type="video/mp4" alt="jhkjgjkg">
+    </video>
+    <h1>{{item.nombre}}</h1>
+    <video src="{{item.ruta}}" controls autoplay></video>
+    <br>
+}

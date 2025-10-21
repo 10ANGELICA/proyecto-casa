@@ -4,10 +4,11 @@ import { Navbar } from './navbar/navbar';
 import { Info } from './info/info';
 import { Carrusel } from "./carrusel/carrusel";
 import { Footer } from './footer/footer';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Navbar, Info, Carrusel, Footer],
+  imports: [RouterOutlet,CommonModule, Navbar, Info, Carrusel, Footer],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
