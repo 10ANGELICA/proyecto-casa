@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+.servicios-container {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #fffaf7 0%, #f9e7d7 50%, #f6d8b8 100%);
+  padding: 4rem 2rem;
+  color: #4e4e4e;
+
+  /* 🎥 SECCIÓN DEL VIDEO */
+  .video-section {
+    text-align: center;
+    margin-bottom: 4rem;
+
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: #633c2f;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #5c4b43;
+      margin-bottom: 2rem;
+      opacity: 0.9;
+    }
+
+    .video-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(99, 60, 47, 0.25);
+
+      video {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 16px;
+      }
+    }
+  }
+
+  /* 🏨 SECCIÓN DE SERVICIOS */
+  .servicios-header {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #633c2f;
+      margin-bottom: 0.5rem;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    p {
+      font-size: 1.15rem;
+      color: #5c4b43;
+      opacity: 0.9;
+    }
+  }
+
+  .servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+  }
+
+  .servicio-card {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    padding: 2rem 1.5rem;
+    max-width: 350px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(99, 60, 47, 0.15);
+    }
+
+    .icono {
+      font-size: 2.6rem;
+      margin-bottom: 1rem;
+      color: #a7745b;
+    }
+
+    h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #633c2f;
+      margin-bottom: 0.8rem;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+  }
+
+  /* 📱 RESPONSIVE */
+  @media (max-width: 768px) {
+    padding: 2rem 1rem;
+
+    .video-section h1 {
+      font-size: 1.9rem;
+    }
+
+    .servicios-header h2 {
+      font-size: 1.8rem;
+    }
+
+    .video-wrapper {
+      max-width: 100%;
+    }
+  }
+}
