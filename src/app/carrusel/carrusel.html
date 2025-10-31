@@ -1,4 +1,35 @@
-<div class="carrusel p-6 max-w-md mx-auto bg-gray-100 rounded shadow-md">
-  <h2 class="text-xl font-semibold mb-4 text-center">CARRUSEL DE IMAGENES</h2>
-  <img [src]="currentImage" alt="Imagen de carrusel" class="w-full h-64 object-cover rounded" />
-</div>
+<section class="carrusel-container">
+  <h2 class="titulo">Fotografías de las habitaciones</h2>
+
+  <div class="carrusel-wrapper">
+    <div class="carrusel-imagen">
+      <button class="nav-btn left" (click)="prevImage()">&#10094;</button>
+
+      @for (item of images; track $index) {
+        <img
+          [src]="item.src"
+          [alt]="item.title"
+          class="slide"
+          [class.active]="currentImageIndex === $index"
+        />
+      }
+
+      <button class="nav-btn right" (click)="nextImage()">&#10095;</button>
+    </div>
+
+    <div class="carrusel-info">
+      <h3>{{ images[currentImageIndex].title }}</h3>
+      <p>{{ images[currentImageIndex].description }}</p>
+    </div>
+  </div>
+
+  <div class="dots">
+    @for (item of images; track $index) {
+      <span
+        class="dot"
+        [class.active]="currentImageIndex === $index"
+        (click)="currentImageIndex = $index"
+      ></span>
+    }
+  </div>
+</section>
