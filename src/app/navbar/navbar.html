@@ -1,15 +1,17 @@
-<nav>
-<h1>HOSPEDAJE   "LOS NOGALES"</h1>
-</nav>
+<nav class="navbar">
+  <div class="navbar-logo">
+    <h1>Hospedaje <span>"Los Nogales"</span></h1>
+  </div>
 
-<nav>
-<h2>
-  <ul style="display: flex; gap: 20px; list-style:none;">
-    <li><a routerLink="/">Inicio</a></li>
-    <li><a routerLink="/servicios">Nuestros Servicios</a></li>
-    <li><a routerLink="/contacto">Contacto</a></li>
+  <button class="navbar-toggle" (click)="isMenuOpen = !isMenuOpen">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <ul class="nav-links" [class.active]="isMenuOpen">
+    <li><a routerLink="/" routerLinkActive="active" (click)="isMenuOpen = false">Inicio</a></li>
+    <li><a routerLink="/servicios" routerLinkActive="active" (click)="isMenuOpen = false">Nuestros Servicios</a></li>
+    <li><a routerLink="/contacto" routerLinkActive="active" (click)="isMenuOpen = false">Contacto</a></li>
   </ul>
-  </h2>
-  
 </nav>
-
