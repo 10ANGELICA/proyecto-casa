@@ -1,71 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
 .presentacion {
-  background: linear-gradient(135deg, #f8c6d0 0%, #f4a7b9 50%, #5c5354 100%);
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 2rem;
-  border-radius: 12px;
-  max-width: 700px;
-  margin: 2rem auto;
-  color: #0e0104; // texto oscuro pero suave
+  font-family: 'Poppins', sans-serif;
+  color: #3e2c2f;
+  text-align: center;
+  overflow: hidden;
 
-  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  box-shadow: 0 10px 20px rgba(240, 114, 137, 0.3);
+  /* 🌄 Fondo fotográfico difuminado */
+  background: url('../../../public/Ayacucho.jpg') no-repeat center center/cover;
 
-  .logo {
-    display: block;
-    max-width: 120px;
-    margin: 0 auto 1.5rem auto;
-    border-radius: 50%;
-    box-shadow: 0 4px 10px rgba(192, 110, 125, 0.4);
+  /* Capa de color para mejorar el contraste */
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(112, 47, 57, 0.5));
+    backdrop-filter: blur(3px);
+    z-index: 1;
   }
 
-  header {
-    text-align: center;
-    margin-bottom: 1.5rem;
+  /* 📜 Contenido principal */
+  .contenido {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 18px;
+    padding: 3rem 2.5rem;
+    max-width: 800px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(8px);
+    animation: fadeIn 1s ease;
 
-    h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      letter-spacing: 2px;
-      color: #7f3241;
-      text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.6);
+    .logo {
+      display: block;
+      max-width: 120px;
+      margin: 0 auto 1.8rem auto;
+      border-radius: 50%;
+      box-shadow: 0 4px 15px rgba(192, 110, 125, 0.5);
+      border: 2px solid #fff;
     }
-  }
 
-  article {
-    p {
-      font-size: 1.1rem;
-      line-height: 1.7;
-      margin-bottom: 1rem;
+    header {
+      margin-bottom: 1.8rem;
 
-      strong {
+      h1 {
+        font-size: 2.4rem;
         font-weight: 700;
-        color: #756468;
+        letter-spacing: 1.5px;
+        color: #7f3241;
+        text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+      }
+    }
+
+    article {
+      text-align: justify;
+
+      p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        margin-bottom: 1.2rem;
+        color: #4b2e0b;
+
+        strong {
+          color: #7f3241;
+        }
+      }
+    }
+
+    nav {
+      margin-top: 2.5rem;
+
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          display: inline-block;
+
+          .btn-conocer {
+            background: linear-gradient(135deg, #f4798e 0%, #e96a83 40%, #b45464 100%);
+            color: #fff;
+            padding: 0.8rem 1.8rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+            box-shadow: 0 4px 10px rgba(212, 86, 110, 0.3);
+
+            &:hover {
+              background: linear-gradient(135deg, #d94a61, #b94458);
+              box-shadow: 0 6px 16px rgba(217, 74, 97, 0.6);
+              transform: translateY(-2px);
+            }
+
+            &:active {
+              transform: translateY(1px);
+            }
+          }
+        }
       }
     }
   }
 
-  nav {
-    margin-top: 2rem;
-    text-align: center;
+  /* Animación de aparición suave */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
-    ul {
-      list-style: none;
-      padding: 0;
+  /* 📱 Responsive */
+  @media (max-width: 768px) {
+    .contenido {
+      padding: 2rem 1.5rem;
 
-      li {
-        a {
-          background: #f4798e;
-          color: white;
-          padding: 0.7rem 1.5rem;
-          border-radius: 25px;
-          text-decoration: none;
-          font-weight: 600;
-          transition: background-color 0.3s ease;
+      h1 {
+        font-size: 2rem;
+      }
 
-          &:hover {
-            background: #d94a61;
-            box-shadow: 0 4px 12px rgba(217, 74, 97, 0.6);
-          }
-        }
+      article p {
+        font-size: 1rem;
       }
     }
   }
